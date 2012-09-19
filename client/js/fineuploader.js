@@ -1,19 +1,25 @@
 /*global jQuery*/
-(function ($) {
+(function($) {
     "use strict";
 
-    var methods;
+    var methods, xhrUploader, settings;
 
     methods = {
-        init : function (options) {
-            $.extend({
+        init : function(options) {
+            settings = $.extend({
                 debug: false,
                 endpoint: '/server/upload'
             }, options);
         }
     };
 
-    $.fn.fineuploader = function (methodOrOptions) {
+    xhrUploader =  {
+        upload: function(id, params) {
+
+        }
+    };
+
+    $.fn.fineuploader = function(methodOrOptions) {
         if (methods[methodOrOptions]) {
             return methods[methodOrOptions].apply(this, Array.prototype.slice.call(arguments, 1));
         } else if (typeof methodOrOptions === 'object' || !methodOrOptions) {
