@@ -1,5 +1,7 @@
 /*global jQuery*/
 (function ($) {
+    "use strict";
+
     var methods;
 
     methods = {
