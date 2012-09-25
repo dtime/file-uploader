@@ -334,6 +334,9 @@ qq.FileUploaderBasic.prototype = {
     setParams: function(params){
         this._options.params = params;
     },
+    setAction: function(url){
+        this._options.action = url;
+    },
     getInProgress: function(){
         return this._filesInProgress;
     },
